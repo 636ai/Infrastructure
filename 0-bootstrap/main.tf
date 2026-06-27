@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "quantamvector-infra-statefile-backup"
+  bucket = "aishprq-infra-statefile-backup-aishhhh99000"
 }
 
 resource "aws_s3_bucket_versioning" "tf_state" {
@@ -21,7 +21,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "tf_state" {
 }
 
 resource "aws_s3_bucket_public_access_block" "tf_state" {
-  bucket = aishprq-infra-statefile-backup-aishhhh99000
+  bucket = aws_s3_bucket.tf_state.id
 
   block_public_acls       = true
   block_public_policy     = true
